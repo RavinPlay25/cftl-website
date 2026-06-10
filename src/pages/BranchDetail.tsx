@@ -1,4 +1,4 @@
-﻿import { Button, Col, Row, Space, Tag, Typography } from 'antd';
+import { Button, Col, Row, Space, Tag, Typography } from 'antd';
 import { Link, useParams } from 'react-router-dom';
 import { BranchGallery } from '../components/BranchGallery';
 import { InfoBlock } from '../components/InfoBlock';
@@ -13,7 +13,10 @@ export const BranchDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const branch = slug ? getBranchBySlug(slug) : undefined;
 
-  usePageMeta(branch ? branch.name : 'Branch Not Found', 'View branch details, facilities, programs, and contact information for CFTL branches.');
+  usePageMeta(
+    branch ? branch.name : 'Branch Not Found',
+    'View branch details, facilities, programs, and contact information for CFTL branches.',
+  );
 
   if (!branch) {
     return (
@@ -35,6 +38,7 @@ export const BranchDetailPage = () => {
             <Typography.Title level={2} style={{ marginBottom: 8 }}>{branch.name}</Typography.Title>
             <Typography.Paragraph type="secondary">{branch.description}</Typography.Paragraph>
             <Space wrap>
+              <Tag color="red" style={{ borderRadius: 999 }}>{branch.capacity}</Tag>
               {branch.programsAvailable.map((program) => <Tag key={program} color="red" style={{ borderRadius: 999 }}>{program}</Tag>)}
             </Space>
           </div>
@@ -45,13 +49,17 @@ export const BranchDetailPage = () => {
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={12}><InfoBlock title="Address" items={[branch.address]} /></Col>
           <Col xs={24} lg={12}><InfoBlock title="Contact" items={[...branch.phoneNumbers, branch.email, branch.openingHours]} /></Col>
+          <Col xs={24} lg={12}><InfoBlock title="Capacity" items={[branch.capacity]} /></Col>
           <Col xs={24} lg={12}><InfoBlock title="Facilities" items={branch.facilities} /></Col>
           <Col xs={24} lg={12}><InfoBlock title="Branch Highlights" items={branch.branchHighlights} /></Col>
         </Row>
       </MotionSection>
 
       <MotionSection className="page-section section-alt">
-        <PageHeader title="Branch Photo Gallery" subtitle="Placeholder branch images. Replace by updating branch photo arrays in src/data/branches.ts." />
+        <PageHeader
+          title="Branch Photo Gallery"
+          subtitle="TODO: Replace these gallery images with verified branch photography once the real asset library is connected."
+        />
         <BranchGallery images={branch.photos} />
       </MotionSection>
 

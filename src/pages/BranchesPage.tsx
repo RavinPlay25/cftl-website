@@ -6,11 +6,11 @@ import { branches } from '../data/branches';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 export const BranchesPage = () => {
-  usePageMeta('Branches', 'Explore all CFTL branches and find branch-specific facilities and contact details.');
+  usePageMeta('Branches', 'Explore all seven CFTL branches and find branch-specific facilities, programs, and contact details.');
 
   return (
     <div className="page-container">
-      <PageHeader title="Our Branches" subtitle="Discover CFTL branch locations, facilities, and contact details." />
+      <PageHeader title="Our Branches" subtitle="Discover the seven CFTL branch locations, their academic focus, and their residential facilities." />
       <MotionSection>
         <Row gutter={[16, 16]}>
           {branches.map((branch) => (

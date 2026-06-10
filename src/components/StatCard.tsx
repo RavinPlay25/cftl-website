@@ -6,7 +6,7 @@ const MotionCard = motion(Card);
 
 interface StatCardProps {
   title: string;
-  value: number;
+  value: number | string;
   suffix?: string;
 }
 

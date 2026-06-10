@@ -1,4 +1,4 @@
-﻿import type { Program, Testimonial } from '../types/content';
+import type { CoreAdvantage, Program, Testimonial } from '../types/content';
 
 export const navItems = [
   { key: '/', label: 'Home' },
@@ -14,68 +14,117 @@ export const navItems = [
 ];
 
 export const heroContent = {
-  title: 'College of Fast Track Learning (CFTL)',
+  title: 'Accelerated Learning for a Fast-Changing World',
   subtitle:
-    "Sri Lanka's First and Largest Residential School Network, helping students achieve focused academic success since 2008.",
+    'College of Fast Track Learning provides a unique fully residential educational experience designed to help students achieve academic excellence through structured learning, continuous academic guidance, and a supportive environment.',
   primaryCta: 'Send Inquiry',
   secondaryCta: 'WhatsApp Us',
 };
 
-export const programs: Program[] = [
+export const coreAdvantages: CoreAdvantage[] = [
   {
-    key: 'ol',
-    title: 'O/L Residential Fast Track',
-    summary: 'A structured residential pathway for G.C.E. O/L students to improve performance with guided learning and discipline.',
-    duration: '6-12 Month Fast Track',
-    highlights: ['Daily supervised study blocks', 'Targeted subject clinics', 'Frequent progress reporting to parents'],
+    title: '100% Residential Education',
+    description: 'Students learn within a fully residential academic environment built for focus, discipline, and consistency.',
   },
   {
-    key: 'al',
-    title: 'A/L Residential Fast Track',
-    summary: 'An intensive residential A/L preparation program with focused exam strategy, subject mastery, and close supervision.',
-    duration: '9-15 Month Fast Track',
-    highlights: ['Exam-focused revision cycles', 'Mentor-led accountability', 'Structured routine for maximum productivity'],
+    title: 'Continuous Academic Guidance',
+    description: 'Structured supervision, mentoring, and regular academic follow-up help students stay on track throughout the term.',
+  },
+  {
+    title: 'Dedicated Staff and Management',
+    description: 'Experienced staff members and branch management work together to maintain academic standards and student welfare.',
+  },
+  {
+    title: 'Structured Study Environment',
+    description: 'Daily routines, supervised study periods, and purpose-built learning spaces create the rhythm needed for accelerated progress.',
+  },
+  {
+    title: 'Career and University Guidance',
+    description: 'Students receive support with subject direction, academic planning, and university pathway preparation.',
+  },
+  {
+    title: 'Student-Centered Academic Support',
+    description: 'Every learner is guided with a student-first approach that responds to academic needs, confidence, and progress.',
+  },
+];
+
+export const programs: Program[] = [
+  {
+    key: 'secondary-education',
+    title: 'Secondary Education Program',
+    summary:
+      'A structured residential education program designed to support students during their formative academic years through supervised study, extracurricular activities, leadership development, and character building.',
+    duration: 'Grades 6-11',
+    highlights: ['Residential academic support', 'Supervised study routines', 'Leadership and character development'],
+  },
+  {
+    key: 'ol-fast-track',
+    title: 'O/L Residential Fast Track Program',
+    summary:
+      'An intensive residential program for G.C.E. O/L students that combines supervised learning, subject-focused preparation, and disciplined study routines.',
+    duration: 'Grades 10 and 11 | 8 Months or 1 Year',
+    highlights: ['Sinhala Medium', 'English Medium', 'All General Subjects', 'Commerce', 'ICT', 'Aesthetic Subjects', 'Civics', 'Health Science', 'Residential Assistant Lecturers', 'Experienced Lecture Panel', 'Local Syllabus Preparation'],
+  },
+  {
+    key: 'al-fast-track',
+    title: 'A/L Residential Fast Track Program',
+    summary:
+      'An advanced residential A/L preparation pathway focused on academic mentoring, university readiness, and guided subject mastery.',
+    duration: '8-18 Months',
+    highlights: ['Biological Science', 'Physical Science', 'Commerce', 'Technology', 'Arts', 'Career Guidance', 'University Guidance', 'Residential Learning', 'Academic Mentoring'],
+  },
+  {
+    key: 'exam-prep',
+    title: '60-Day Residential Examination Preparation Program',
+    summary:
+      'An intensive paper practice and discussion program designed for students preparing for GCE O/L and GCE A/L examinations.',
+    duration: '60 Days',
+    highlights: ['Paper practice sessions', 'Focused discussion classes', 'Exam technique support', 'Residential learning intensity'],
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     key: '1',
-    name: 'Kumari Perera',
-    role: 'Parent',
-    quote: 'CFTL gave our son the structure and confidence he needed. We saw discipline, improvement, and peace of mind.',
+    name: 'Placeholder Parent Testimonial 1',
+    role: 'Placeholder',
+    quote: 'Placeholder testimonial content will be replaced with verified parent feedback once real testimonials are provided.',
   },
   {
     key: '2',
-    name: 'Nethmi Jayasinghe',
-    role: 'A/L Student',
-    quote: 'The residential environment kept me focused. Teachers and supervisors supported me every day.',
+    name: 'Placeholder Student Testimonial 2',
+    role: 'Placeholder',
+    quote: 'Placeholder testimonial content will be replaced with verified student feedback once real testimonials are provided.',
   },
   {
     key: '3',
-    name: 'Ravindu Fernando',
-    role: 'O/L Student',
-    quote: 'Study halls and scheduled sessions helped me use my time better and improve my results quickly.',
+    name: 'Placeholder Parent Testimonial 3',
+    role: 'Placeholder',
+    quote: 'Placeholder testimonial content will be replaced with verified family feedback once real testimonials are provided.',
   },
 ];
 
 export const stats = [
-  { title: 'Founded', value: 2008, suffix: '' },
-  { title: 'Residential Branches', value: 12, suffix: '+' },
-  { title: 'Students Guided', value: 15000, suffix: '+' },
-  { title: 'Parent Satisfaction', value: 95, suffix: '%' },
+  { title: 'Operating Since', value: 2008, suffix: '' },
+  { title: 'Branches', value: 7, suffix: '' },
+  { title: 'Students Educated', value: 10000, suffix: '+' },
+  { title: 'Pass Rate', value: 99, suffix: '%' },
+  { title: 'University Selection Rate', value: '20-30', suffix: '%' },
 ];
 
 export const contactDetails = {
-  phone: '+94 11 000 0000',
-  email: 'info@cftl.lk',
-  address: 'CFTL Head Office, Colombo, Sri Lanka',
+  phone: '0716 99 00 88',
   whatsapp: '94716990088',
+  email: 'collegeoffasttracklearning@gmail.com',
+  facebook: 'https://www.facebook.com/share/1EGfDXu6LZ/',
+  youtube: 'https://www.youtube.com/@cftleducations',
+  address: 'CFTL Head Office, Pelawatta, Sri Lanka',
+  schoolName: 'College of Fast Track Learning (CFTL)',
 };
 
 export const admissionsSteps = [
-  'Submit your inquiry with student details and preferred program.',
-  'Receive a call from CFTL admissions for guidance and branch matching.',
-  'Attend counseling and program orientation.',
-  'Complete registration and begin the residential learning journey.',
+  'Students may register by completing admission payments according to the intake requirements.',
+  'For Biological Science and Physical Science streams, students are required to attend an interview and assessment before enrollment.',
+  'Scholarship opportunities are available for high-performing O/L students entering A/L programs.',
+  'Once admission is confirmed, the student is placed into the appropriate residential academic program and onboarding process begins.',
 ];

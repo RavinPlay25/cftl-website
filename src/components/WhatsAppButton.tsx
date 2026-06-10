@@ -8,7 +8,7 @@ export const WhatsAppButton = () => (
     tooltip="WhatsApp Us"
     href={`https://wa.me/${contactDetails.whatsapp}`}
     target="_blank"
-    style={{ insetInlineEnd: 24, insetBlockEnd: 92 }}
+    style={{ insetInlineEnd: 24, insetBlockEnd: 92, backgroundColor: '#25D366', color: '#ffffff' }}
   />
 );
 

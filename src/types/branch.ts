@@ -1,10 +1,11 @@
-﻿export interface Branch {
+export interface Branch {
   id: string;
   slug: string;
   name: string;
   shortName: string;
   description: string;
   address: string;
+  capacity: string;
   phoneNumbers: string[];
   email: string;
   openingHours: string;

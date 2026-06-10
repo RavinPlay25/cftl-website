@@ -1,4 +1,4 @@
-﻿import { Button, Tag, Typography } from 'antd';
+import { Button, Tag, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import type { Branch } from '../types/branch';
 import { AnimatedCard } from './AnimatedCard';
@@ -9,6 +9,9 @@ export const BranchCard = ({ branch }: { branch: Branch }) => (
     <Typography.Title level={4} style={{ marginBottom: 8 }}>{branch.shortName}</Typography.Title>
     <Typography.Paragraph type="secondary">{branch.description}</Typography.Paragraph>
     <div style={{ marginBottom: 12 }}>
+      <Tag color="red" style={{ borderRadius: 999, marginBottom: 6 }}>
+        {branch.capacity}
+      </Tag>
       {branch.programsAvailable.map((program) => (
         <Tag key={program} color="red" style={{ borderRadius: 999, marginBottom: 6 }}>{program}</Tag>
       ))}

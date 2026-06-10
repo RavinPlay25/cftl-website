@@ -181,6 +181,24 @@ body {
   color: #ffffff;
 }
 
+.footer-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.footer-social-links .ant-btn-link {
+  color: #ffffff;
+}
+
+.footer-social-links .ant-btn-link:hover {
+  color: #ffccd4 !important;
+}
+
 @media (max-width: 767px) {
   .hero-section {
     padding: 30px 18px;

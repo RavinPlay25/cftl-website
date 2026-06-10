@@ -1,4 +1,4 @@
-﻿import { Button } from 'antd';
+import { Button } from 'antd';
 import { Link, useParams } from 'react-router-dom';
 import { ImageGrid } from '../components/ImageGrid';
 import { MotionSection } from '../components/MotionSection';
@@ -25,7 +25,7 @@ export const GalleryAlbumPage = () => {
 
   return (
     <div className="page-container">
-      <PageHeader title={album.title} subtitle={album.description} />
+      <PageHeader title={album.title} subtitle={`${album.description} TODO: Replace placeholder images with verified CFTL photography.`} />
       <MotionSection>
         <ImageGrid images={album.images} />
       </MotionSection>

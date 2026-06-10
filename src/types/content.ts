@@ -1,4 +1,8 @@
-﻿export type ProgramType = 'O/L Residential Fast Track' | 'A/L Residential Fast Track';
+export type ProgramType =
+  | 'Secondary Education Program'
+  | 'O/L Residential Fast Track Program'
+  | 'A/L Residential Fast Track Program'
+  | '60-Day Residential Examination Preparation Program';
 
 export interface Program {
   key: string;
@@ -22,3 +26,7 @@ export interface GalleryItem {
   image: string;
 }
 
+export interface CoreAdvantage {
+  title: string;
+  description: string;
+}

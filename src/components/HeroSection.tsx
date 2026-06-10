@@ -1,4 +1,4 @@
-﻿import { Button, Col, Row, Space, Tag, Typography } from 'antd';
+import { Button, Col, Row, Space, Typography } from 'antd';
 import { MessageOutlined, SafetyCertificateOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -17,9 +17,6 @@ export const HeroSection = () => (
     <Row gutter={[24, 24]} align="middle">
       <Col xs={24} lg={14}>
         <motion.div variants={fadeInUp}>
-          <Tag color="red" style={{ borderRadius: 999, paddingInline: 12, paddingBlock: 4, marginBottom: 10 }}>
-            Since 2008
-          </Tag>
           <Typography.Title level={1} className="hero-heading">
             {heroContent.title}
           </Typography.Title>
