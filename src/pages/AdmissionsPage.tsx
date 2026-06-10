@@ -1,4 +1,4 @@
-import { Alert, Col, Collapse, List, Row } from 'antd';
+import { Alert, Col, Collapse, List, Row, Space, Typography } from 'antd';
 import { AnimatedCard } from '../components/AnimatedCard';
 import { InquiryForm } from '../components/InquiryForm';
 import { MotionSection } from '../components/MotionSection';
@@ -24,35 +24,42 @@ export const AdmissionsPage = () => {
           </Col>
           <Col xs={24} lg={10}>
             <AnimatedCard title="Admissions Process" className="premium-card">
-              <List dataSource={admissionsSteps} renderItem={(step, index) => <List.Item>{index + 1}. {step}</List.Item>} />
+              <List
+                dataSource={admissionsSteps}
+                renderItem={(step, index) => <List.Item>{index + 1}. {step}</List.Item>}
+              />
+              <Space direction="vertical" size={16} style={{ width: '100%', marginTop: 24 }}>
+                <div>
+                  <Typography.Title level={5} style={{ marginBottom: 12 }}>
+                    Important Notes
+                  </Typography.Title>
+                  <Alert
+                    type="info"
+                    showIcon
+                    message="A/L Science Entry"
+                    description="Students applying for Biological Science or Physical Science will attend an interview and assessment before final enrollment."
+                  />
+                  <Alert
+                    type="success"
+                    showIcon
+                    style={{ marginTop: 12 }}
+                    message="Scholarship Opportunity"
+                    description="High-performing O/L students entering A/L programs may be considered for scholarship opportunities."
+                  />
+                </div>
+                <div>
+                  <Typography.Title level={5} style={{ marginBottom: 12 }}>
+                    FAQs
+                  </Typography.Title>
+                  <Collapse
+                    items={[
+                      { key: '1', label: 'When does intake begin?', children: 'Intakes are handled according to branch requirements and program availability.' },
+                      { key: '2', label: 'Can parents visit the campus?', children: 'Parent visits are coordinated based on branch policies and student support needs.' },
+                    ]}
+                  />
+                </div>
+              </Space>
             </AnimatedCard>
-            <div style={{ marginTop: 16 }}>
-              <AnimatedCard title="Important Notes">
-                <Alert
-                  type="info"
-                  showIcon
-                  message="A/L Science Entry"
-                  description="Students applying for Biological Science or Physical Science will attend an interview and assessment before final enrollment."
-                />
-                <Alert
-                  type="success"
-                  showIcon
-                  style={{ marginTop: 12 }}
-                  message="Scholarship Opportunity"
-                  description="High-performing O/L students entering A/L programs may be considered for scholarship opportunities."
-                />
-              </AnimatedCard>
-            </div>
-            <div style={{ marginTop: 16 }}>
-              <AnimatedCard title="FAQs">
-                <Collapse
-                  items={[
-                    { key: '1', label: 'When does intake begin?', children: 'Intakes are handled according to branch requirements and program availability.' },
-                    { key: '2', label: 'Can parents visit the campus?', children: 'Parent visits are coordinated based on branch policies and student support needs.' },
-                  ]}
-                />
-              </AnimatedCard>
-            </div>
           </Col>
         </Row>
       </MotionSection>

@@ -63,7 +63,7 @@ export const programs: Program[] = [
     summary:
       'An intensive residential program for G.C.E. O/L students that combines supervised learning, subject-focused preparation, and disciplined study routines.',
     duration: 'Grades 10 and 11 | 8 Months or 1 Year',
-    highlights: ['Sinhala Medium', 'English Medium', 'All General Subjects', 'Commerce', 'ICT', 'Aesthetic Subjects', 'Civics', 'Health Science', 'Residential Assistant Lecturers', 'Experienced Lecture Panel', 'Local Syllabus Preparation'],
+    highlights: ['Sinhala Medium', 'English Medium', 'Residential Assistant Lecturers', 'Experienced Lecture Panel', 'Local Syllabus Preparation'],
   },
   {
     key: 'al-fast-track',
