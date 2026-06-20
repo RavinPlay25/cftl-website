@@ -33,7 +33,7 @@ export const BranchDetailPage = () => {
     <div className="page-container">
       <MotionSection>
         <div className="hero-section" style={{ padding: 0, overflow: 'hidden' }}>
-          <img src={branch.coverImage} alt={branch.name} style={{ width: '100%', height: 300, objectFit: 'cover' }} />
+          {branch.coverImage ? <img src={branch.coverImage} alt={branch.name} style={{ width: '100%', height: 300, objectFit: 'cover' }} /> : null}
           <div style={{ padding: 24 }}>
             <Typography.Title level={2} style={{ marginBottom: 8 }}>{branch.name}</Typography.Title>
             <Typography.Paragraph type="secondary">{branch.description}</Typography.Paragraph>
@@ -55,13 +55,12 @@ export const BranchDetailPage = () => {
         </Row>
       </MotionSection>
 
-      <MotionSection className="page-section section-alt">
-        <PageHeader
-          title="Branch Photo Gallery"
-          subtitle="TODO: Replace these gallery images with verified branch photography once the real asset library is connected."
-        />
-        <BranchGallery images={branch.photos} />
-      </MotionSection>
+      {branch.photos.length > 0 ? (
+        <MotionSection className="page-section section-alt">
+          <PageHeader title="Branch Photo Gallery" subtitle="Browse branch photography." />
+          <BranchGallery images={branch.photos} />
+        </MotionSection>
+      ) : null}
 
       <MotionSection className="page-section">
         <PageHeader title="Location Map" subtitle="View the branch location and get directions." />

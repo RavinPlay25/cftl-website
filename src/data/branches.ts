@@ -1,9 +1,5 @@
 import type { Branch } from '../types/branch';
 
-// TODO: Replace these placeholder photos with verified CFTL branch photography when the asset library is available.
-const branchPlaceholderPhotos = (prefix: string) =>
-  Array.from({ length: 8 }, (_, i) => `https://picsum.photos/seed/${prefix}-${i + 1}/1200/800`);
-
 const mapEmbed = (query: string) => `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
 
 export const branches: Branch[] = [
@@ -21,8 +17,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Pelawatta, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/pbMVv1VTTV4igs7c9',
-    coverImage: 'https://picsum.photos/seed/pelawatta-cover/1500/800',
-    photos: branchPlaceholderPhotos('pelawatta'),
+    coverImage: '',
+    photos: [],
     facilities: ['Swimming Pool', 'Cricket Ground', 'Volleyball Court', 'Badminton Court'],
     programsAvailable: ['A/L English Medium'],
     branchHighlights: ['Head office administration', 'Focused residential A/L support', 'Compact learning community'],
@@ -41,8 +37,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Bandaragama, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/7Xt1QctV4toBs7Q18',
-    coverImage: 'https://picsum.photos/seed/bandaragama-cover/1500/800',
-    photos: branchPlaceholderPhotos('bandaragama'),
+    coverImage: '',
+    photos: [],
     facilities: ['Swimming Pool', 'Volleyball Court', 'Badminton Court', 'Weedagama Lake View'],
     programsAvailable: ['A/L Technology Boys'],
     branchHighlights: ['Technology stream focus', 'Residential discipline and mentoring', 'Broad recreational support'],
@@ -61,8 +57,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Dodangoda, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/aDcgxSHYxLnC82WK7',
-    coverImage: 'https://picsum.photos/seed/dodangoda-cover/1500/800',
-    photos: branchPlaceholderPhotos('dodangoda'),
+    coverImage: '',
+    photos: [],
     facilities: ['Cricket Ground', 'Agricultural Lands', 'Volleyball Court', 'Badminton Court'],
     programsAvailable: ['Secondary Education Program (Boys)'],
     branchHighlights: ['Large-capacity residential structure', 'Strong school-year foundation', 'Boys\' academic development focus'],
@@ -81,8 +77,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Kalutara North, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/D44dyquGEfwKnm3E6',
-    coverImage: 'https://picsum.photos/seed/kalutara-north-cover/1500/800',
-    photos: branchPlaceholderPhotos('kalutara-north'),
+    coverImage: '',
+    photos: [],
     facilities: ['Auditorium', 'Volleyball Court', 'Badminton Court'],
     programsAvailable: ['Secondary Education Program (Girls)'],
     branchHighlights: ['Girls\' residential supervision', 'Character-building academic routines', 'Supportive lower-secondary environment'],
@@ -101,8 +97,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Kalutara, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/HfL7LXegjM9YAyBSA',
-    coverImage: 'https://picsum.photos/seed/kalutara-cover/1500/800',
-    photos: branchPlaceholderPhotos('kalutara'),
+    coverImage: '',
+    photos: [],
     facilities: ['Swimming Pool', 'Volleyball Court', 'Badminton Court'],
     programsAvailable: ['A/L Commerce & Arts (Girls)'],
     branchHighlights: ['Commerce and Arts pathways', 'Girls\' residential academic support', 'Consistent supervision and mentoring'],
@@ -121,8 +117,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Kelaniya, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/YS4ekjmG7VmF825H9',
-    coverImage: 'https://picsum.photos/seed/kelaniya-cover/1500/800',
-    photos: branchPlaceholderPhotos('kelaniya'),
+    coverImage: '',
+    photos: [],
     facilities: ['Volleyball Court', 'Badminton Court'],
     programsAvailable: ['A/L Commerce & Arts (Boys)'],
     branchHighlights: ['Boys\' academic focus', 'Commerce and Arts stream support', 'University guidance emphasis'],
@@ -141,8 +137,8 @@ export const branches: Branch[] = [
     openingHours: 'Monday to Sunday: 7:00 AM - 8:00 PM',
     mapEmbedUrl: mapEmbed('Galle, Sri Lanka'),
     googleMapsUrl: 'https://maps.app.goo.gl/bxQECBdYx19SiV5S9',
-    coverImage: 'https://picsum.photos/seed/galle-cover/1500/800',
-    photos: branchPlaceholderPhotos('galle'),
+    coverImage: '',
+    photos: [],
     facilities: ['Volleyball Court', 'Badminton Court'],
     programsAvailable: ['A/L Bio & Maths'],
     branchHighlights: ['Science stream preparation', 'Residential academic mentoring', 'Exam readiness and discipline'],

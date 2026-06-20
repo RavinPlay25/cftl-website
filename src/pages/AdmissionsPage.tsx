@@ -1,25 +1,39 @@
-import { Alert, Col, Collapse, List, Row, Space, Typography } from 'antd';
+import { Alert, Button, Col, Collapse, List, Row, Space, Typography } from 'antd';
 import { AnimatedCard } from '../components/AnimatedCard';
-import { InquiryForm } from '../components/InquiryForm';
 import { MotionSection } from '../components/MotionSection';
 import { PageHeader } from '../components/PageHeader';
 import { admissionsSteps } from '../data/content';
 import { usePageMeta } from '../hooks/usePageMeta';
 
+const inquiryFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe45FlX7cb6U4lP1PmGrhzShk8u31We6eDLn8QVuT4SMBzd6A/viewform?usp=publish-editor';
+
 export const AdmissionsPage = () => {
   usePageMeta(
     'Admissions & Inquiry',
-    'Submit a CFTL inquiry, review the admission process, and learn about stream assessments and scholarship opportunities for O/L to A/L entry.',
+    'Open the CFTL admissions inquiry form, review the admission process, and learn about stream assessments and scholarship opportunities for O/L to A/L entry.',
   );
 
   return (
     <div className="page-container">
-      <PageHeader title="Admissions and Inquiry" subtitle="Submit your details and our team will guide you through program selection and enrollment." />
+      <PageHeader
+        title="Admissions and Inquiry"
+        subtitle="Please use the official Google Form below to send your inquiry. Our team will guide you through program selection and enrollment."
+      />
       <MotionSection>
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
             <AnimatedCard title="Inquiry Form">
-              <InquiryForm />
+              <Space direction="vertical" size={16} style={{ width: '100%' }}>
+                <Alert
+                  type="info"
+                  showIcon
+                  message="Admissions inquiries are now handled through Google Forms."
+                  description="Use the official form to submit your details directly to the admissions team."
+                />
+                <Button type="primary" size="large" href={inquiryFormUrl} target="_blank" rel="noreferrer">
+                  Open Inquiry Form
+                </Button>
+              </Space>
             </AnimatedCard>
           </Col>
           <Col xs={24} lg={10}>

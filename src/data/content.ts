@@ -7,8 +7,6 @@ export const navItems = [
   { key: '/facilities', label: 'Facilities' },
   { key: '/results', label: 'Results' },
   { key: '/branches', label: 'Branches' },
-  { key: '/gallery', label: 'Gallery' },
-  { key: '/testimonials', label: 'Testimonials' },
   { key: '/admissions', label: 'Admissions' },
   { key: '/contact', label: 'Contact' },
 ];

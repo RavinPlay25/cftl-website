@@ -3,16 +3,13 @@ import { Link } from 'react-router-dom';
 import { HeroSection } from '../components/HeroSection';
 import { SectionTitle } from '../components/SectionTitle';
 import { ProgramCard } from '../components/ProgramCard';
-import { TestimonialCard } from '../components/TestimonialCard';
 import { CTASection } from '../components/CTASection';
 import { StatCard } from '../components/StatCard';
 import { FeatureCard } from '../components/FeatureCard';
 import { MotionSection } from '../components/MotionSection';
-import { AlbumCard } from '../components/AlbumCard';
 import { BranchCard } from '../components/BranchCard';
 import { branches } from '../data/branches';
-import { coreAdvantages, programs, stats, testimonials } from '../data/content';
-import { galleryAlbums } from '../data/galleryAlbums';
+import { coreAdvantages, programs, stats } from '../data/content';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const studentLifeItems = [
@@ -131,31 +128,6 @@ export const HomePage = () => {
           {stats.map((item) => (
             <Col xs={12} md={6} key={item.title}>
               <StatCard title={item.title} value={item.value} suffix={item.suffix} />
-            </Col>
-          ))}
-        </Row>
-      </MotionSection>
-
-      <MotionSection className="page-section">
-        <SectionTitle title="Testimonials" subtitle="Placeholder testimonial content remains in place until verified parent and student feedback is supplied." />
-        <Row gutter={[16, 16]}>
-          {testimonials.map((t) => (
-            <Col xs={24} md={8} key={t.key}>
-              <TestimonialCard testimonial={t} />
-            </Col>
-          ))}
-        </Row>
-      </MotionSection>
-
-      <MotionSection className="page-section section-alt">
-        <SectionTitle
-          title="Gallery Albums"
-          subtitle="Gallery imagery is currently placeholder content and will be connected to real CFTL photography later."
-        />
-        <Row gutter={[16, 16]}>
-          {galleryAlbums.slice(0, 3).map((album) => (
-            <Col xs={24} md={8} key={album.id}>
-              <AlbumCard album={album} />
             </Col>
           ))}
         </Row>

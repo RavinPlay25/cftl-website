@@ -1,5 +1,3 @@
-﻿import { ImageGrid } from './ImageGrid';
+import { ImageGrid } from './ImageGrid';
 
-export const BranchGallery = ({ images }: { images: string[] }) => (
-  <ImageGrid images={images} />
-);
+export const BranchGallery = ({ images }: { images: string[] }) => (images.length > 0 ? <ImageGrid images={images} /> : null);
